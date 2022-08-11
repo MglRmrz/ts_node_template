@@ -4,6 +4,7 @@ import cors from 'cors';
 import fileUpload from 'express-fileupload';
 import config from '../config';
 import Routes from './Routes';
+import Database from './Database';
 
 class App {
     private app: Application;
@@ -26,6 +27,7 @@ class App {
         );
         this.app.use(fileUpload({createParentPath: true}));
         this.app.use('/public', express.static(config.publicRoute));
+        Database.init();
         Routes(this.app);
     }
 }

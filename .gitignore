@@ -1,3 +1,7 @@
+.idea/
+.vscode/
+tmp/
+temp/
 node_modules
 .env
 yarn.lock
@@ -5,4 +9,5 @@ yarn-error.log
 package-lock.json
 build
 src/public/**
+firebase.json
 ecosystem.config.js
