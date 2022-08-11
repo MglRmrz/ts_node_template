@@ -1,0 +1,54 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint"],
+  "extends": ["plugin:jsdoc/recommended"],
+  "rules": {
+    "semi": "error",
+    "quotes": [2, "single"],
+    "no-empty": "error",
+    "no-extra-semi": "error",
+    "consistent-return": "error",
+    "default-case": "error",
+    "eqeqeq": "warn",
+    "no-else-return": "error",
+    "camelcase": "off",
+    "arrow-parens": "warn",
+    "constructor-super": "error",
+    "no-class-assign": "error",
+    "no-useless-constructor": "error",
+    "no-var": "error",
+    "prefer-arrow-callback": "warn",
+    "prefer-const": "warn",
+    "no-empty-character-class": "error",
+    "@typescript-eslint/explicit-function-return-type": "warn",
+    "no-use-before-define": "error",
+    "@typescript-eslint/no-explicit-any": "error",
+    "@typescript-eslint/naming-convention": [
+      "error",
+      {
+        "selector": ["interface", "enum"],
+        "format": ["PascalCase"],
+        "custom": {
+          "regex": "^[I | E][A-Z]",
+          "match": true
+        }
+      }
+    ],
+    "@typescript-eslint/no-empty-interface": [
+      "error",
+      {
+        "allowSingleExtends": false
+      }
+    ],
+    "jsdoc/require-returns-description": "off"
+  },
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "modules": true
+    },
+    "project": "./tsconfig.json"
+  },
+  "ignorePatterns": ["build/*"]
+}

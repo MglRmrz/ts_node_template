@@ -1,0 +1,8 @@
+node_modules
+.env
+yarn.lock
+yarn-error.log
+package-lock.json
+build
+src/public/**
+ecosystem.config.js
